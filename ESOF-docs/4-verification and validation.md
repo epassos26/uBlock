@@ -7,6 +7,7 @@
 1. [Testabilidade do Software](#testabilidade)
 1. [Estatísticas e análise de teste](#estatisticas)
 1. [Correção de Bug](#correcao)
+1. [Grupo e Contribuição](#grupo)
 
 
 <a name="Introdução"/>
@@ -114,5 +115,19 @@ O grupo conseguiu identificar um problema com o *uBlock Origin* no site do ["Jor
 Por exemplo, [nesta página](http://www.jn.pt/mundo/interior/documentaram-viagem-para-entregar-droga-com-fotografias-sensuais-5369065.html), se o utilizador tiver o *uBlock Origin* ativado, não conseguirá ver mais que duas fotografias.
 
 Este *bug* deve-se ao facto do *site* utilizar programas ligados à galeria que permitem recolher informação sobre os visitantes que interagem com a mesma. Após mais alguma pesquisa, o grupo descobriu que os programas se deviam ao conceito [*Gemius Audience*](https://audience.gemius.com/en/methodology/overview/) que tem como intuito a recolha de dados de utilizadores *online*.
-O *uBlock Origin* entra neste cenário na medida em que tem incorporado vários filtros de manuntenção de privacidade, que estavam a entrar com conflito com esta medida do jornal.
-Isto permitiu-nos concluir que o problema não é do *uBlock Origin*, mas das políticas do "Jornal de Notícias" e da restrição de partilha de informação dos filtros incluídos com o programa.
+O *uBlock Origin* entra neste cenário na medida em que tem incorporado vários filtros de manutenção de privacidade, que estavam a entrar com conflito com esta medida do jornal.
+Por acharmos que este bug resulta de uma incompatibilidade entre um dos objetivos do *uBlock Origin* e a maneira de operar do site do "Jornal de Notícias", o grupo decidiu não tentar resolver o *bug*.
+
+Ao investigar *issues* levantados por outros utilizadores, o grupo decidiu resolver o *issue* [#2001](https://github.com/gorhill/uBlock/issues/2001), em que, por vezes, a extensão bloqueava páginas inteiras por filtrar *cookies* que estavam aplicados ao elemento  `<html>` do *DOM* da página. Como indicado pelo responsável pelo *uBlock Origin* na discussão do issue, isto devia-se ao facto de a extensão não considerar esse elemento ao verificar o HTML das páginas, começando a análise no elemento `<body>`.
+
+Modificando o *DOM Inspector* (ficheiro src/js/scriptlets/dom-inspector.js) de forma a começar a analisar o DOM a partir da raíz da árvore, foi possível resolver este problema.
+
+Foi feito, por isso, o *pull request* [#2213](https://github.com/gorhill/uBlock/pull/2213) para o projeto.
+
+***
+<a name="grupo"/>
+## Grupo e Contribuição
+
+* Bernardo Belchior - up201405381 - 33,33%
+* Edgar Passos - up201404131 - 33,33%
+* José Pedro Monteiro - up201406458 - 33,33%
