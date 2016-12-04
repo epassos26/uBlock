@@ -37,7 +37,7 @@ Testabilidade do Software caracteriza-se pelo grau de suporte de testes, num det
 
 Como forma de relacionar a testabilidade com a dificuldade de encontrar no programa, uma medida relevante para avaliar a testabilidade é o número de casos de teste necessários para formar um conjunto completo de testes. Se o número for pequeno então a testabilidade é alta tendo uma relação de porporcionalidade inversa.
 
-O *uBlock* não usa casos de teste em específico, sendo que utiliza o [*Travis CI*](https://travis-ci.org/) para a cada *commit* verificar se existe erros no programa, ao fazer *build* do programa com as especificações indicadas. Estas especificações são indicadas num ficheiro *.travis.yml* que é adicionado a raiz do projeto.
+O *uBlock* não usa casos de teste em específico, sendo que utiliza o [*Travis CI*](https://travis-ci.org/) para a cada *commit* verificar se existe erros no programa, ao fazer *build* do programa com as especificações indicadas. Estas especificações são indicadas num ficheiro *.travis.yml* que é adicionado a raiz do projeto. Esta verificação de erros por parte do *Travis CI* é realizada através de ficheiros de teste criados pelo utilizador.
 
 * ### Controlabilidade
  * Possibilidade de controlar o estado de uma componente sob teste (*CUT*).
@@ -52,7 +52,7 @@ O *uBlock* não usa casos de teste em específico, sendo que utiliza o [*Travis 
 * ### Isolabilidade
  * Possibilidade de uma *CUT* ser testada isoladamente.
 
- O programa de testes (*Travis CI*) usado pelo *uBlock*, permite testar componentes isoladamente, no entanto, a isolabilidade das *CUT* no *uBlock* decresce de acordo com o grau de dependência de outras componentes. Um exemplo de dependências é a componente dos *settings* para com o *dashboard* (interface do *uBlock*). Em análise, a isolabilidade dos testes no *uBlock* não é muito elevada, uma vez que quase todas as componentes do tipo *javascript* têm como dependência a componente *dashboard*.
+ O programa de testes (*Travis CI*) usado pelo *uBlock*, permite testar componentes isoladamente, no entanto, a isolabilidade das *CUT* no *uBlock* decresce de acordo com o grau de dependência de outras componentes. Um exemplo de dependências é a componente dos *settings* para com o *dashboard* (interface do *uBlock*). Em análise, a isolabilidade dos testes no *uBlock* não é muito elevada, uma vez que quase todas as componentes do tipo *javascript* têm como dependência a componente *dashboard*. Apesar dos testes poderem ser realizados em componentes isoladas, este são sempre realizados através do *build* do programa completo.
 
 * ### Separação de preocupações
  * Grau de separação de responsabilidades das CUTs - se têm uma única responsabilidade, bem definida.
