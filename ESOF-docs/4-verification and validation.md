@@ -115,7 +115,8 @@ O grupo conseguiu identificar um problema com o *uBlock Origin* no site do ["Jor
 Por exemplo, [nesta página](http://www.jn.pt/mundo/interior/documentaram-viagem-para-entregar-droga-com-fotografias-sensuais-5369065.html), se o utilizador tiver o *uBlock Origin* ativado, não conseguirá ver mais que duas fotografias.
 
 Este *bug* deve-se ao facto do *site* utilizar programas ligados à galeria que permitem recolher informação sobre os visitantes que interagem com a mesma. Após mais alguma pesquisa, o grupo descobriu que os programas se deviam ao conceito [*Gemius Audience*](https://audience.gemius.com/en/methodology/overview/) que tem como intuito a recolha de dados de utilizadores *online*.
-O *uBlock Origin* entra neste cenário na medida em que tem incorporado vários filtros de manutenção de privacidade, que estavam a entrar com conflito com esta medida do jornal.
+O *uBlock Origin* entra neste cenário na medida em que tem incorporado vários filtros de manuntenção de privacidade, que estavam a entrar com conflito com esta medida do jornal, especificamente [*EasyPrivacy*](https://forums.lanik.us) e [*Peter Lowe’s Ad and tracking server list*](https://pgl.yoyo.org/adservers/).
+
 Por acharmos que este bug resulta de uma incompatibilidade entre um dos objetivos do *uBlock Origin* e a maneira de operar do site do "Jornal de Notícias", o grupo decidiu não tentar resolver o *bug*.
 
 Ao investigar *issues* levantados por outros utilizadores, o grupo decidiu resolver o *issue* [#2001](https://github.com/gorhill/uBlock/issues/2001), em que, por vezes, a extensão bloqueava páginas inteiras por filtrar *cookies* que estavam aplicados ao elemento  `<html>` do *DOM* da página. Como indicado pelo responsável pelo *uBlock Origin* na discussão do issue, isto devia-se ao facto de a extensão não considerar esse elemento ao verificar o HTML das páginas, começando a análise no elemento `<body>`.
