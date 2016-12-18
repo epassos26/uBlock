@@ -20,7 +20,7 @@ Durante a realização deste processo, temos de ter em conta que as alterações
 Ao longo do tempo é inevitável estas alterações do software devido aos seguintes factos,
 * Novos requisitos que surgem quando o *software* é utilizado.
 * O ambiente de negócios muda.
-* Erros que são descobertos e a necessidade de seem reparados.
+* Erros que são descobertos e a necessidade de serem reparados.
 * Novos computadores e equipamentos são adicionados ao sistema.
 * O desempenho ou a confiabilidade do *software* podem ter de ser melhorados.
 
