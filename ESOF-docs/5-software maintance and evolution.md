@@ -9,6 +9,7 @@
 1. [Manutenção do software](#manutencao)
 1. [Implementação da feature](#implementacao)
 1. [Pull request](#pull)
+1. [Grupo e contribuição](#grupo_contribuicao)
 
 <a name="introducao"/>
 ## Introdução
@@ -74,9 +75,7 @@ Nas restantes métricas por analisar, podemos concluir através da métrica ***K
 ## Implementação da *feature*
 
 Ao navegar pelos *issues* do projeto, o grupo encontrou um [*issue*](https://github.com/gorhill/uBlock/issues/2224) que achou interessante resolver.
-O utilizador *WillPittenger* que mudou do *AdBlock Latitude* para o *uBlock Origin* reparou que este não tinha atalhos, de modo a facilitar a navegação.
-
-Tendo isto em conta, o grupo implementou um atalho que liga o *Element Picker* de modo a selecionar que elementos de uma página o utilizador tenciona remover.
+O utilizador *WillPittenger* que mudou do *AdBlock Latitude* para o *uBlock Origin* reparou que este não tinha atalhos, de modo a facilitar a navegação. Sendo o grupo constituído por elementos que fazem uso de atalhos e acham que a existência destes é uma mais valia para a eficiência do uso do *uBlock*, então o grupo decidiu implementar um atalho que liga o *Element Picker* de modo a selecionar que elementos de uma página o utilizador tenciona remover.
 ![*Element Picker*](images/element-picker.png)
 
 Recentemente, o Firefox alterou a maneira como suporta atalhos para extensões, tendo migrado para uma maneira semelhante à do Google Chrome - através de um *manifest.json*.
@@ -88,3 +87,10 @@ Apesar deste contra-tempo, o grupo conseguiu implementar o atalho para os browse
 
 Após ter finalizado a implementação, o grupo criou um [*pull request*](https://github.com/gorhill/uBlock/pull/2251) para o repositório original.
 Infelizmente, o criador não é conhecido por aceitar *pull requests*, tendo explicitamente escrito no [*CONTRIBUTING.md*](https://github.com/gorhill/uBlock/blob/master/CONTRIBUTING.md) que não aceita contribuições.
+
+<a name="grupo_contribuicao"/>
+## Grupo e Contribuição
+
+* Bernardo Belchior - up201405381 - 33,33%
+* Edgar Passos - up201404131 - 33,33%
+* José Pedro Monteiro - up201406458 - 33,33%
