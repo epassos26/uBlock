@@ -36,6 +36,19 @@ Com a execução da ferramenta no nosso projeto, podemos verificar que nem todas
 <img src="images/better_code_hub_general.png"/>
 
 
-## Implementação da feature
+## Implementação da *feature*
+
+Ao navegar pelos *issues* do projeto, o grupo encontrou um [*issue*](https://github.com/gorhill/uBlock/issues/2224) que acho interessante resolver.
+O utilizador *WillPittenger* que mudou do *AdBlock Latitude* para o *uBlock Origin* reparou que este não tinha atalhos, de modo a facilitar a navegação.
+
+Tendo isto em conta, o grupo implementou um atalho que liga o *Element Picker* de modo a selecionar que elementos de uma página o utilizador tenciona remover.
+![*Element Picker*](images/element-picker.png)
+
+Recentemente, o Firefox alterou a maneira como suporta atalhos para extensões, tendo migrado para uma maneira semelhante à do Google Chrome - através de um *manifest.json*.
+Contudo, o ficheiro de configurações do uBlock para o Firefox ainda tem o sistema antigo de configuração. Devido a este facto, o grupo não conseguiu encontrar informação sobre como implementar esta *feature* no Firefox.
+Apesar deste contra-tempo, o grupo conseguiu implementar o atalho para os browsers Opera, Google Chrome e para os navegadores que seguem o protocolo WebExt.
 
 ## *Pull Request*
+
+Após ter finalizado a implementação, o grupo criou um [*pull request*](https://github.com/gorhill/uBlock/pull/2251) para o repositório original.
+Infelizmente, o criador não é conhecido por aceitar *pull requests*, tendo explicitamente escrito no [*CONTRIBUTING.md*](https://github.com/gorhill/uBlock/blob/master/CONTRIBUTING.md) que não aceita contribuições.
