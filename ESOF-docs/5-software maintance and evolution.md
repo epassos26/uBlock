@@ -78,6 +78,8 @@ Ao navegar pelos *issues* do projeto, o grupo encontrou um [*issue*](https://git
 O utilizador *WillPittenger* que mudou do *AdBlock Latitude* para o *uBlock Origin* reparou que este não tinha atalhos, de modo a facilitar a navegação. Sendo o grupo constituído por elementos que fazem uso de atalhos e acham que a existência destes é uma mais valia para a eficiência do uso do *uBlock*, então o grupo decidiu implementar um atalho que liga o *Element Picker* de modo a selecionar que elementos de uma página o utilizador tenciona remover.
 ![*Element Picker*](images/element-picker.png)
 
+Para a identificação da parte do código a editar, foram utilizadas as ferramentas de desenvolvimento que vêm nativamente com o Google Chrome. Estas permitem correr o programa passo a passo de modo a encontrar o pedaço exato de código a modificar. Aliado a isto, o grupo pesquisou como se abria o modo de seleção de elemento do programa pelo botão que já existia na extensão. A partir disto, foi possível arranjar a melhor maneira de lançar o código necessário.
+
 Recentemente, o Firefox alterou a maneira como suporta atalhos para extensões, tendo migrado para uma maneira semelhante à do Google Chrome - através de um *manifest.json*.
 Contudo, o ficheiro de configurações do uBlock para o Firefox ainda tem o sistema antigo de configuração. Devido a este facto, o grupo não conseguiu encontrar informação sobre como implementar esta *feature* no Firefox.
 Apesar deste contra-tempo, o grupo conseguiu implementar o atalho para os browsers Opera, Google Chrome e para os navegadores que seguem o protocolo WebExt.
